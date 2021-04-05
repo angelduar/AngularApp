@@ -1,0 +1,5 @@
+package com.angelduar.springboot.model;
+
+public class Student {
+
+}
