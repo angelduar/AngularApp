@@ -1,5 +1,0 @@
-package com.angelduar.springboot.exception;
-
-public class ResourceNotFoundException {
-
-}
