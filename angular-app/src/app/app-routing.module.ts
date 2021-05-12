@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateStudentComponent } from './create-student/create-student.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { UpdateStudentComponent } from './update-student/update-student.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { MoviesComponent } from './movies/movies.component';
+import { CostumerComponent } from './costumer/costumer.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { SigninComponent } from './signin/signin.component';
 
+//defining routes to my components 
 const routes: Routes = [
-  {path: "students", component: StudentListComponent},
-  {path: "create-student", component: CreateStudentComponent},
-  {path: '', redirectTo: 'students', pathMatch: 'full'},
-  {path: 'update-student/:id', component: UpdateStudentComponent}
+  {path: "movie-list", component: MovieListComponent},
+  {path: "movies/:id", component: MoviesComponent},
+  {path: "costumer", component: CostumerComponent},
+  { path: 'login', component: LoginComponent },
+  {path: '', redirectTo: 'movies', pathMatch: 'full'},
+  { path: 'logout', component: LogoutComponent },
+  { path: 'signin', component: SigninComponent }
 ];
 
 @NgModule({

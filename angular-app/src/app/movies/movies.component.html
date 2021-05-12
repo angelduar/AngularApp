@@ -1,0 +1,19 @@
+<h3> View Movie Details</h3>
+<div>
+    <div>
+        <label> <b> Movie Name: </b></label> {{movie.movie_name}}
+    </div>
+    <div>
+        <label> <b> Show Date: </b></label> {{movie.show_date}}
+    </div>
+    <div>
+        <label> <b> Show Time: </b></label> {{movie.show_time}}
+    </div>
+    <div>
+        <label> <b> Ticket Price ($): </b></label> {{movie.price}}
+    </div>
+    <div id = "container">
+        <button (click) = "Purchase()" class="btn btn-dark" type="submit" id="button1"> Purchase </button>
+        <button (click) = "back()" class="btn btn-dark" type="submit" id="button2"> Go Back </button>
+    </div>
+</div>

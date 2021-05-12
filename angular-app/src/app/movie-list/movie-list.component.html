@@ -1,0 +1,25 @@
+<h2> Movie List </h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Movie ID </th>
+            <th> Movie Name </th>
+            <th> Show Date </th>
+            <th> Show Time </th>
+            <th> Price $ </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let movie of movies">
+            <td>{{movie.id}}</td>
+            <td>{{movie.movie_name}}</td>
+            <td>{{movie.show_date}}</td>
+            <td>{{movie.show_time}}</td>
+            <td>{{movie.price}}</td>
+            <td>
+                <button (click) = "view(movie.id)" class = "btn btn-primary">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

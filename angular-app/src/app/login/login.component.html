@@ -1,0 +1,33 @@
+<div class = "col-md-6 offset-md-3"> 
+    <h3> Log in </h3>
+    <form>
+        <div class = "form-group">
+            <label> First Name </label>
+            <input type="text" class = "form-control" id = "first_name"
+                [(ngModel)] = "costumer.first_name" name = "first_name">
+        </div>
+        <div class = "form-group">
+            <label> Last Name </label>
+            <input type="text" class = "form-control" id = "last_name"
+                [(ngModel)] = "costumer.last_name" name = "last_name">
+        </div>
+        <div class = "form-group">
+            <label> Email </label>
+            <input type="text" class = "form-control" id = "email"
+                [(ngModel)] = "costumer.email" name = "email">
+        </div>
+        <div class = "form-group">
+            <label> username </label>
+            <input type="text" class = "form-control" id = "username"
+                [(ngModel)] = "costumer.username" name = "username">
+        </div>
+        <div class = "form-group">
+            <label> password </label>
+            <input type="password" class = "form-control" id = "password"
+                [(ngModel)] = "costumer.password" name = "password">
+        </div>
+    
+        <button (click)=Login() class="btn btn-success" id="button1"> Login </button>
+        <button (click) = signin() class="btn btn-dark" type="submit" id="button2"> Sign in </button>
+    </form>
+    </div>

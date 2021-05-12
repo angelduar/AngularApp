@@ -1,0 +1,8 @@
+#button1 , #button2 {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#container {
+    text-align: left;
+}

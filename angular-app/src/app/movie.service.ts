@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Student} from './student';
+import {Movie} from './movie';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService {
+export class MovieService {
 
-  private baseURL = "http://localhost:8080/api/v1/students/";
+  //reponse from REST api
+  private baseURL = "http://localhost:8080/api/v1/movies";
   constructor(private httpClient: HttpClient) { }
 
-  getStudentsList(): Observable<Student[]>{
-    return this.httpClient.get<Student[]>(this.baseURL);
+  getMoviesList(): Observable<Movie[]>{
+    return this.httpClient.get<Movie[]>(this.baseURL);
   }
 
-  createStudent(student: Student): Observable<Object>{
-    return this.httpClient.post(this.baseURL, student);
+  getMovieById(id: number): Observable<Movie>{
+    return this.httpClient.get<Movie>(`${this.baseURL}/${id}`);
   }
+
+  /*
 
   updateStudent(id: number, student: Student): Observable<Object>{
     return this.httpClient.put(`${this.baseURL}/${id}`, student);
@@ -30,4 +33,5 @@ export class StudentService {
   getStudentbyId(id: number): Observable<Student>{
     return this.httpClient.get<Student>(`${this.baseURL}/${id}`);
   }
+  */
 }

@@ -1,0 +1,22 @@
+<div class = "col-md-6 offset-md-3"> 
+    <h3> Purchase Ticket </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class = "form-group">
+            <label> First Name </label>
+            <input type="text" class = "form-control" id = "first_name"
+                [(ngModel)] = "costumer.first_name" name = "first_name">
+        </div>
+        <div class = "form-group">
+            <label> Last Name </label>
+            <input type="text" class = "form-control" id = "last_name"
+                [(ngModel)] = "costumer.last_name" name = "last_name">
+        </div>
+        <div class = "form-group">
+            <label> Email </label>
+            <input type="text" class = "form-control" id = "email"
+                [(ngModel)] = "costumer.email" name = "email">
+        </div>
+    
+        <button class="btn btn-dark" type="submit"> Check Out </button>
+    </form>
+    </div>
