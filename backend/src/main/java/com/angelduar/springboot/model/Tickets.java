@@ -7,33 +7,53 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Tickets")
+@Table(name = "tickets")
 public class Tickets {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long num;
+	private long id;
 	
-	@Column(name = "TicketPrice")
-	private long price;
+	@Column(name = "first_name")
+	private String firstName;
+	
+	@Column(name = "last_name")
+	private String lastName;
+	
+	@Column(name = "email")
+	private String email_id;
 	
 	public Tickets() {}
 	
 	
-	public Tickets(long Ticket_price) {
+	public Tickets(String firstName, String lastName, String email) {
 		super();
-		this.price = Ticket_price;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email_id = email;
 	}
 	public long getId() {
-		return num;
+		return id;
 	}
 	public void setId(long id) {
-		this.num = id;
+		this.id = id;
 	}
-	public long getTicket_price() {
-		return price;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setTicket_price(long price) {
-		this.price = price;
+	public void setFirstName(String first_name) {
+		this.firstName = first_name;
 	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String last_name) {
+		this.lastName = last_name;
+	}
+	public String getEmail() {
+		return email_id;
+	}
+	public void setEmail(String email) {
+		this.email_id = email;
+	}	
+	
 }

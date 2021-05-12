@@ -24,18 +24,18 @@ public class CostumerController {
 	@Autowired
 	private CostumerRepository costumerRepository;
 	
-	@GetMapping("/costumers")
+	@GetMapping("/costumer")
 	public List<Costumers> getAllCostumers(){
 		return costumerRepository.findAll();
 		}
 	
 	    //student rest API
-		@PostMapping("/costumers")
+		@PostMapping("/costumer")
 		public Costumers createCostumer(@RequestBody Costumers costumer) {
 			return costumerRepository.save(costumer);
 		}
 			
-		@GetMapping("/costumers/{id}")
+		@GetMapping("/costumer/{id}")
 		public ResponseEntity<Costumers> getCostumerById(@PathVariable Long id) {
 			Optional<Costumers> optionalEntity = costumerRepository.findById(id);
 			Costumers costumer = optionalEntity.get();

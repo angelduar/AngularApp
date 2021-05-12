@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {CostumerService} from '../costumer.service';
 import {Router} from '@angular/router';
 import {Costumer} from '../costumer';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-costumer',
@@ -11,19 +10,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CostumerComponent implements OnInit {
 
-  id: number;
-  costumer: Costumer;
-  constructor(private CostumerService: CostumerService, private router: Router, private route: ActivatedRoute) { }
+  costumer: Costumer = new Costumer();
+  constructor(private CostumerService: CostumerService, private router: Router) { }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
-    console.log(this.id);
-
-    this.costumer = new Costumer();
-    this.CostumerService.getCostumerById(this.id).subscribe(data => {
-      this.costumer = data;
-      console.log(data);
-    });
   }
 
   goToDisplay(){
@@ -31,8 +21,12 @@ export class CostumerComponent implements OnInit {
   }
 
   saveCostumer(){
-    alert("Your Purchase has been processed succesfully");
-    this.goToDisplay();
+    this.CostumerService.createCostumer(this.costumer).subscribe(data => {
+      console.log(data);
+      alert("Your Purchase has been processed succesfully");
+      this.goToDisplay();
+    },
+    error => console.log(error));
   }
 
   onSubmit(){

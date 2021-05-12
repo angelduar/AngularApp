@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MoviesComponent } from './movies/movies.component';
-import { CostumerComponent } from './costumer/costumer.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SigninComponent } from './signin/signin.component';
+import { CostumerComponent } from './costumer/costumer.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 //defining routes to my components 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {path: '', redirectTo: 'movies', pathMatch: 'full'},
   { path: 'logout', component: LogoutComponent },
-  { path: 'signin', component: SigninComponent }
+  { path: 'signin', component: SigninComponent },
+  { path: 'ticket', component: TicketComponent }
 ];
 
 @NgModule({

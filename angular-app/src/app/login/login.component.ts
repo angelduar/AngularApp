@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   goToDisplay(){
-    this.router.navigate(['/costumer']);
+    this.router.navigate(['/ticket']);
   }
 
   Login(){
@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit {
   }
 
   signin(){
-    alert("this button works");
     this.router.navigate(['/signin']);
   }
 

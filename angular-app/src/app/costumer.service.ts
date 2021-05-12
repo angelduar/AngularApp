@@ -9,7 +9,7 @@ import {Costumer} from './costumer';
 export class CostumerService {
 
   //reponse from REST api
-  private baseURL = "http://localhost:8080/api/v1/costumers";
+  private baseURL = "http://localhost:8080/api/v1/costumer";
   constructor(private httpClient: HttpClient) { }
 
   
